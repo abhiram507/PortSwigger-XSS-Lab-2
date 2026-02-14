@@ -131,6 +131,7 @@ X-Frame-Options: SAMEORIGIN
 
 
 
+
 Proof of Exploitation:
 
 
@@ -150,9 +151,13 @@ Figure 3: PortSwigger Academy confirmation – "Congratulations, you solved the 
 
 
 
+
+
 Exploitation Explanation:
 
 The application stores comment data without server-side sanitization and outputs it directly into HTML context (e.g., between <p> or <div> tags) without HTML-encoding characters like < > " ' &. This allows arbitrary tag/script injection. No CSP, WAF, or output encoding prevents execution. Payload executes persistently for all viewers.
+
+
 
 
 
@@ -161,6 +166,8 @@ Risk Assessment:
 Likelihood of Exploitation: High (simple submission, persistent reflection, no protections).
 Potential Impact: High — persistent code execution across users; enables advanced attacks like session theft or malware delivery.
 Affected Components: Comment storage and rendering on blog post pages.
+
+
 
 
 
@@ -174,6 +181,8 @@ Perform regular security testing (Burp Scanner, OWASP ZAP, manual review) and co
 
 
 
+
+
 Conclusion and Lessons Learned:
 
 This lab demonstrated classic stored XSS in plain HTML context with zero encoding — solved with a single <script>alert(1)</script> payload.
@@ -184,6 +193,9 @@ Stored XSS is persistent (second-order) and affects multiple users.
 Identify reflection context (here: direct HTML insertion).
 Basic payloads work when nothing is encoded — always test simple script tags first.
 Strengthened understanding of XSS persistence, impact, and remediation.
+
+
+
 
 
 References:
