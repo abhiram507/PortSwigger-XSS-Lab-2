@@ -140,7 +140,7 @@ Proof of Exploitation:
 Figure 1: Payload submitted in comment form (name, email, website filled as dummy).
 
 
-![Proof of Successful XSS Exploitation]()
+![Proof of Successful XSS Exploitation](https://github.com/abhiram507/PortSwigger-XSS-Lab-2/blob/060205f0586a6b3ee5212fa1bc04570d588aa40b/Portswigger%20XSS%20Lab%202%20success.png)
 
 Figure 2: JavaScript alert(1) pops up when viewing the blog post.
 
