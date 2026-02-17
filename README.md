@@ -135,7 +135,7 @@ X-Frame-Options: SAMEORIGIN
 Proof of Exploitation:
 
 
-![Proof of XSS  Error]()
+![Proof of XSS  Error](https://github.com/abhiram507/PortSwigger-XSS-Lab-2/blob/8ceb528d0c30c2397fff2ebe9cbbd9b799ac0b96/PortSwigger-XSS-Lab-2%20Error.png)
 
 Figure 1: Payload submitted in comment form (name, email, website filled as dummy).
 
